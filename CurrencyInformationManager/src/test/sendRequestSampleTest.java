@@ -19,10 +19,7 @@ public class sendRequestSampleTest {
     String line, line2 ;
 
 
-    /**
-     * Creates data for testing.
-     * @throws IOException
-     */
+
 
     @Before
 
@@ -47,9 +44,7 @@ public class sendRequestSampleTest {
 
     }
 
-    /**
-     * tests sendRequest method.
-     */
+
     @Test
     public void sendRequestTest(){
 

@@ -10,24 +10,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 
-/**
- * parses arguments form command line and perform the program.
- */
+
 public class Main {
-    /**
-     * parser atrguments from command line, creates instances of classes and call needed methods.
-     * @param args String [] : arguments from commandline
-     * @throws IOException
-     */
+
  public static void main (String [] args) throws IOException, ParseException {
 
-     //args = new String []{"-a","eur","2017-12-13"};
-     //args = new String []{ "-b","2002-12-01","2017-12-01"};
-     //args = new String []{ "-c","2017-12-17"};
-     //args = new String []{ "-d","2002-12-18"};
-     //args = new String []{ "-e", "2017-12-12"};
-     //args = new String []{ "-f","jpy"};
-     //args = new String []{ "-g","chf","2017","10","1","2017","12","4","*"};
 
      IRouterHTTP router = new RouterHTTP();
      IJsonParser parser = new JsonParser();

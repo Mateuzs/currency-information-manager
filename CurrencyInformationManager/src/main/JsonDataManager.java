@@ -26,11 +26,7 @@ public class JsonDataManager implements IJsonDataManager {
 
 
 
-    /**
-     * Computes json data from json structures.
-     * @param startDate, endDate:  period of time to compute average price.
-     * @return BigDecimal
-     */
+
     public BigDecimal computeAverageGoldPrice(String startDate, String endDate) throws IOException {
 
         double averagePrice = 0.0, numberOfDays =0.0;
@@ -76,11 +72,7 @@ public class JsonDataManager implements IJsonDataManager {
 
 
 
-    /**
-     * finds currency with the lowest buying rate in defined day.
-     * @param jsonArray JsonArray
-     * @return currency and bid rate
-     */
+
     public String findCheapestCurrency(JsonArray jsonArray){
 
         String currency = new String();
@@ -102,10 +94,7 @@ public class JsonDataManager implements IJsonDataManager {
     }
 
 
-    /**
-     * finding lowest and highest rate of the currency.
-     * @return String with information
-     */
+
     public Object[] findEdgePricesForCurrency(String currency) throws IOException {
 
         DateTime startDateValue = new DateTime(2002, 01, 01, 0, 0, 0);
@@ -183,11 +172,7 @@ public class JsonDataManager implements IJsonDataManager {
 
 
 
-    /**
-     * Finds currency with highest amplitude of exchange rate.
-     * @param startDate
-     * @return Object [] information.
-     */
+
     public Object[] findCurrencyWithHighestAmplitude(String startDate) throws IOException {
 
         String currency = null;
@@ -257,11 +242,7 @@ public class JsonDataManager implements IJsonDataManager {
     }
 
 
-    /**
-     * sort table A of currencies by the amplitude between ask rate and bid rate.
-     * @param jsonArray
-     * @return
-     */
+
     public List<JsonNode> sortCurrencies(JsonArray jsonArray){
 
         JsonArray array = jsonArray.getJsonObject(0).getJsonArray("rates");
@@ -284,18 +265,7 @@ public class JsonDataManager implements IJsonDataManager {
         return currencies;
     }
 
-    /**
-     * generates data for diagram.
-     * @param currency
-     * @param startYear
-     * @param startMonth
-     * @param startWeek
-     * @param endYear
-     * @param endMonth
-     * @param endWeek
-     * @return
-     * @throws IOException
-     */
+
     public HashMap<String, List<Double>> createDiagram (String currency, String startYear,String startMonth, String startWeek,String endYear, String endMonth, String endWeek) throws IOException {
 
          HashMap<String, List<Double>> currencyData = new HashMap<>();

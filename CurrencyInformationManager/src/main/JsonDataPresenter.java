@@ -12,14 +12,11 @@ import java.util.*;
 
 
 /**
- * Implements presenting json data.
+ *  Implements methods of presenting json data.
  */
 public class JsonDataPresenter implements IJsonDataPresenter {
 
-    /**
-     * presents current gold price.
-     * @param jsonArray JsonArray
-     */
+
     public void presentGoldPrice(JsonArray jsonArray){
 
         JsonObject object = jsonArray.getJsonObject(0);
@@ -32,10 +29,7 @@ public class JsonDataPresenter implements IJsonDataPresenter {
     }
 
 
-    /**
-     * presents exchange rate of defined currency.
-     * @param jsonObject JsonObject
-     */
+
     public void presentExchangeRate(JsonObject jsonObject){
 
         JsonObject object = jsonObject.getJsonArray("rates").getJsonObject(0);
@@ -47,10 +41,8 @@ public class JsonDataPresenter implements IJsonDataPresenter {
 
     }
 
-    /**
-     * presents average gold price in defined period of time.
-     * @param averagePrice BigDecimal given from method "computeAverageGoldPrice".
-     */
+
+
     public void presentAverageGoldPrice(BigDecimal averagePrice){
 
 
@@ -61,10 +53,8 @@ public class JsonDataPresenter implements IJsonDataPresenter {
 
     }
 
-    /**
-     * presents currency with the lowest bid rate.
-     * @param currency String
-     */
+
+
     public void presentCheapestCurency( String currency){
 
         System.out.println("\n Currency with lowest buying rate: "+currency+"\n");
@@ -74,10 +64,7 @@ public class JsonDataPresenter implements IJsonDataPresenter {
     }
 
 
-    /**
-     * Presents edge prices for the currency between defined period of time.
-     * @param information Object[] {currency, highest value, highest value date, lowest value, lowest value date}
-     */
+
     public void presentHighestAndLowestPriceOfCurrency(Object [] information){
 
         System.out.println("\nCurrency: "+ information[0] +", highest rate: "+information[1]+", on: "+information[2]+", lowest rate: "+information[3]+", on: "+information[4]+"\n");
@@ -87,10 +74,7 @@ public class JsonDataPresenter implements IJsonDataPresenter {
     }
 
 
-    /**
-     * Presents currency with the highest amplitude of exchange rate.
-     * @param information Object [] {currency, amplitude}
-     */
+
     public void presentCurrencyWithHighestAmplitude(Object [] information){
 
         System.out.println("\n Currency with the highest amplitude: "+ information[0]+", amplitude: "+ information[1]+"\n");
@@ -101,10 +85,7 @@ public class JsonDataPresenter implements IJsonDataPresenter {
 
     }
 
-    /**
-     * Presents sorted table of currencies (sorted by the amplitude between ask rate and bid rate.
-      * @param currencies
-     */
+
     public void presentSortedTableOfCurrencies(List<JsonNode> currencies){
 
         System.out.println("\n Currency  ask-rate  bid-rate \n");
@@ -131,11 +112,7 @@ public class JsonDataPresenter implements IJsonDataPresenter {
     }
 
 
-    /**
-     * present currency data as a diagram.
-     * @param currencyData
-     * @param sign
-     */
+
     public void presentDiagram(HashMap<String, List<Double>> currencyData, String sign) {
 
     Double max = currencyData.get("poniedziałek").get(0);
@@ -155,9 +132,7 @@ public class JsonDataPresenter implements IJsonDataPresenter {
 
     }
 
-    /**
-     * Shows a description of functions.
-     */
+
     public void presentHelp(){
         System.out.println("\n Welcome in CurrencyInformator, here is the short description of how to use this program :)"+
                 "\n\n date should be in shape yyyy-mm-dd , currency code is a three-letter code like : 'chf'" +
@@ -175,12 +150,6 @@ public class JsonDataPresenter implements IJsonDataPresenter {
     }
 
 
-
-
-    /**
-     * presents diagram data for one day.
-     * @param data List
-     */
     private void presentDataForOneDay(String day, List<Double> data, Double max, String sign){
 
 

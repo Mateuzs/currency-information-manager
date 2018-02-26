@@ -20,10 +20,7 @@ public class IntegrationTest {
 
     List<JsonNode> information;
 
-    /**
-     * Download needed data using avery class involved in the process
-     * @throws IOException
-     */
+
     @Before
     public void CreateData() throws IOException {
 
@@ -34,9 +31,7 @@ public class IntegrationTest {
     }
 
 
-    /**
-     * Compare downloaded and parsed data with expected answer.
-     */
+
     @Test
     public void IntegrationTestForSortingCurrencies(){
 

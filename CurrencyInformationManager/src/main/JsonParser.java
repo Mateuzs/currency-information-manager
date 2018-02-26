@@ -12,12 +12,8 @@ import java.net.URLConnection;
  */
 public class JsonParser implements IJsonParser {
 
-    /**
-     * Parses input stream to JsonArray.
-     * @param inputStream InputStream
-     * @return JsonArray
-     * @throws IOException
-     */
+
+
     public JsonArray parseJsonDataToArray(InputStream inputStream) throws IOException {
 
         JsonReader jsonreader = Json.createReader(inputStream);
@@ -27,12 +23,7 @@ public class JsonParser implements IJsonParser {
         return jsonArray;
     }
 
-    /**
-     * Parses input stream to JsonObject.
-     * @param inputStream InputStream
-     * @return
-     * @throws IOException
-     */
+
 
     public JsonObject parseJsonDataToObject(InputStream inputStream) throws IOException {
 

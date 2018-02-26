@@ -21,10 +21,7 @@ public class JsonDataManagerSampleTests {
     String currency;
     Object[] information, information2, information3;
 
-    /**
-     * Creates data for testing
-     * @throws IOException
-     */
+
     @Before
     public void  CreateData() throws IOException {
 
@@ -48,10 +45,7 @@ public class JsonDataManagerSampleTests {
 
     }
 
-    /**
-     * Tests computeAverageGoldPrice method.
-     * @throws IOException
-     */
+
     @Test
     public void computeAvrageGoldPriceTest() throws IOException {
 
@@ -59,25 +53,19 @@ public class JsonDataManagerSampleTests {
 
     }
 
-    /**
-     * Tests findCheapestCurrency method.
-     */
+
     @Test
     public void findCheapestCurrencyTest(){
         Assert.assertEquals("HUF, rate: 0.013265",currency);
     }
 
 
-    /**
-     * Tests findEdgePricesForCurrency method.
-     */
+
     @Test
     public void findEdgePricesForCurrencyTest(){ Assert.assertEquals(information,information2);}
 
 
-    /**
-     * Tests FindCurrencyWithHighestAmplitude method.
-     */
+
     @Test
    public void FindCurrencyWithHighestAmplitudeTest(){Assert.assertEquals(new Object[]{"CAD",0.1650999999999998}, information3);}
 

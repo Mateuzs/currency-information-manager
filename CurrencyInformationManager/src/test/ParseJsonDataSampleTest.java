@@ -25,10 +25,6 @@ public class ParseJsonDataSampleTest {
     JsonObject jsonObject1, jsonObject2;
     JsonArray jsonArray1, jsonArray2;
 
-    /**
-     * Creates data for testing.
-     * @throws IOException
-     */
 
     @Before
     public void createData() throws IOException {
@@ -69,9 +65,7 @@ public class ParseJsonDataSampleTest {
     }
 
 
-    /**
-     * Tests parseJsonDataToArray method.
-     */
+
     @Test
     public void parseJsonDatatoArrayandToObjectTest(){
 

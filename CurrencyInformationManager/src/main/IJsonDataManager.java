@@ -38,7 +38,7 @@ public interface IJsonDataManager {
     /**
      * Presents currency with highest amplitude of exchange rate.
      * @param startDate String
-     * @return Objext [] information string currency name and double amplitude.
+     * @return Object [] information string currency name and double amplitude.
      */
      Object[] findCurrencyWithHighestAmplitude(String startDate) throws IOException;
 
@@ -51,14 +51,14 @@ public interface IJsonDataManager {
 
     /**
      * Generate data for currency diagram.
-     * @param currency
-     * @param startYear
-     * @param startMonth
-     * @param startWeek
-     * @param endYear
-     * @param endMonth
-     * @param endWeek
-     * @return
+     * @param currency String
+     * @param startYear String
+     * @param startMonth String
+     * @param startWeek String
+     * @param endYear String
+     * @param endMonth String
+     * @param endWeek String
+     * @return HashMap(String, List(Double))
      */
     HashMap<String,List<Double>> createDiagram (String currency, String startYear,String startMonth, String startWeek,String endYear, String endMonth, String endWeek) throws IOException;
 
