@@ -135,14 +135,16 @@ public class JsonDataPresenter implements IJsonDataPresenter {
 
     public void presentHelp(){
         System.out.println("\n Welcome in CurrencyInformator, here is the short description of how to use this program :)"+
-                "\n\n date should be in shape yyyy-mm-dd , currency code is a three-letter code like : 'chf'" +
-                "\n\n <-a> <currency-code> <date> : Gives information about gold price and defined currency ratio in given day " +
-                "\n\n <-b> <date-start> <date-end> : gives information about average price of gold between given days " +
-                "\n\n <-c> <start-date> :  Gives information about currency with highest amplitude in price between given date and actual date" +
-                "\n\n <-d>  <date> : gives information about the currency with the lowest bid rate in defined day" +
-                "\n\n <-e> <date> : gives a table of currencies in defined day, sorted by the amplitude between mid and ask rate.  "+
-                "\n\n <-f> <currency-code> : gives information when the currency was cheapest and when the most expensive. " +
-                "\n\n <-g> <currency-code> <startYear> <startMonth> <startWeek> <endYear> <endMonth> <endWeek> <sign> : shows a diagram of currency ratio changes in given period"
+                "\n\n date should be in shape yyyy-mm-dd , currency code is a three-letter code, for example : chf" +
+                "\n\n -a <currency-code> <date> : Gives information about gold price and defined currency ratio in given day " +
+                "\n\n -b <date-start> <date-end> : gives information about average price of gold between given days " +
+                "\n\n -c <start-date> :  Gives information about currency with highest amplitude in price between given date and actual date" +
+                "\n\n -d  <date> : gives information about the currency with the lowest bid rate in defined day" +
+                "\n\n -e <date> : gives a table of currencies in defined day, sorted by the amplitude between mid and ask rate.  "+
+                "\n\n -f <currency-code> : gives information when the currency was cheapest and when the most expensive. " +
+                "\n\n -g <currency-code> <startYear> <startMonth> <startWeek> <endYear> <endMonth> <endWeek> <sign> : shows a diagram of currency ratio changes in given period" +
+                "\n\n\t Examples:    \n\n\t java -jar CurrencyInformationManager.jar -a chf\n\t java -jar CurrencyInformationManager.jar -g eur"+
+                "\n\t java -jar CurrencyInformationManager.jar -g gbp 2012 01 1 2018 02 3 \\*"
         );
 
         System.out.println("\n\n\n\n");
